@@ -157,7 +157,7 @@ volumes:
     
 ```console
    docker exec -it node-api  npx sequelize db:migrate
-   docker exec -it node-apinpx sequelize db:seed:all
+   docker exec -it node-api npx sequelize db:seed:all
 ```
 
 ## Acesse a aplicação em:
