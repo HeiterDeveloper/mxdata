@@ -31,7 +31,7 @@ docker pull node
 docker pull nginx
 ```
 
->Crie o seguinte arquivo, para gerar a imagem do postgres
+>Crie o arquivo Dockerfile, para gerar a imagem do postgres
 ```console
 FROM debian
 
@@ -71,7 +71,7 @@ CMD ["/usr/lib/postgresql/11/bin/postgres", "-D", "/var/lib/postgresql/11/main",
 docker build -t db-api .
 ```
 
->Entre na pasta da api e crie o arquivo
+>Entre na pasta da api e crie o arquivo Dockerfile
 
 ```console
 FROM node
@@ -96,7 +96,7 @@ CMD [ "node", "/usr/src/app/src/server.js" ]
 docker build -t node-api .
 ```
 
->Entre na pasta do site e crie o arquivo:
+>Entre na pasta do site e crie o arquivo Dockerfile:
 
 ```console
 FROM nginx
@@ -109,7 +109,7 @@ COPY default.conf /etc/nginx/conf.d/default.conf
 docker build -t site-react .
 ```
 
->Com o docker compose instalado, crie o arquivo:
+>Com o docker compose instalado, crie o arquivo docker-compose.yml:
 
 ```console
 version: "3.3"
